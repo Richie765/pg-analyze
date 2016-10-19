@@ -1,6 +1,6 @@
 {
   "name": "pg-analyze",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Determine which tables are used in a PostgreSQL query.",
   "main": "dist/tablesUsed.js",
   "dependencies": {
