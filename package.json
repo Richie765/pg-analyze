@@ -4,6 +4,7 @@
   "description": "Determine which tables are used in a PostgreSQL query.",
   "main": "dist/tablesUsed.js",
   "dependencies": {
+    "babel-runtime": "^6.18.0",
     "source-map-support": "0.4.2"
   },
   "devDependencies": {
