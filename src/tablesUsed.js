@@ -18,7 +18,11 @@ async function tablesUsed(db, query, params) {
   let result = await db.one(`EXPLAIN (FORMAT JSON) ${query}`, params);
   let tables = nodeWalker(result['QUERY PLAN'][0]['Plan']);
 
-  return tables;
+  // Return deduped
+
+  var seen = {};
+
+  return tables.filter(table => seen.hasOwnProperty(table) ? false : (seen[table] = true) );
 }
 
 export default tablesUsed;
